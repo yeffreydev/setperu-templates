@@ -1,0 +1,117 @@
+---
+// src/pages/index.astro
+import Layout from "../../../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <!-- Encabezado -->
+  <header class="bg-blue-600 text-white py-6 text-center">
+    <h1 class="text-4xl font-bold">Transforma tu Futuro con Nosotros</h1>
+    <p class="text-lg mt-2">
+      Descubre el camino al éxito con nuestras soluciones exclusivas.
+    </p>
+  </header>
+
+  <!-- Propuesta de Valor -->
+  <section class="max-w-5xl mx-auto px-6 py-12 text-center">
+    <h2 class="text-3xl font-bold">La solución perfecta para tu crecimiento</h2>
+    <p class="mt-4 text-gray-700">
+      Accede a recursos exclusivos y lleva tu aprendizaje al siguiente nivel.
+    </p>
+    <img
+      src="https://source.unsplash.com/600x400/?success"
+      alt="Progreso"
+      class="mx-auto mt-6 rounded-lg shadow-lg"
+    />
+  </section>
+
+  <!-- Llamado a la Acción & Captación de Leads -->
+  <section class="bg-blue-100 py-12 text-center">
+    <h2 class="text-2xl font-bold">Únete hoy y recibe un regalo exclusivo</h2>
+    <p class="mt-2 text-gray-700">
+      Descarga nuestra guía gratuita y empieza tu viaje.
+    </p>
+    <div class="mt-6 flex flex-col items-center">
+      <input
+        type="email"
+        placeholder="Tu correo electrónico"
+        class="px-4 py-2 w-80 border rounded-md"
+      />
+      <button
+        class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+        >Recibir Guía</button
+      >
+    </div>
+    <p class="mt-4 text-gray-600">O envíanos un mensaje:</p>
+    <a href="https://wa.me/1234567890" class="text-blue-500 font-bold"
+      >Enviar WhatsApp</a
+    >
+  </section>
+
+  <!-- Beneficios Clave -->
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-center">¿Por qué elegirnos?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+        <h3 class="font-bold text-lg">Acceso exclusivo</h3>
+        <p class="text-gray-600">
+          Contenido premium diseñado para tu crecimiento.
+        </p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+        <h3 class="font-bold text-lg">Expertos a tu servicio</h3>
+        <p class="text-gray-600">Recibe asesoría personalizada en cada paso.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+        <h3 class="font-bold text-lg">Resultados comprobados</h3>
+        <p class="text-gray-600">
+          Miles de personas ya han transformado su vida.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Garantías y Seguridad -->
+  <section class="bg-gray-100 py-12 text-center">
+    <h2 class="text-2xl font-bold">Garantía de Satisfacción</h2>
+    <p class="mt-2 text-gray-700">
+      Si no estás 100% satisfecho, te devolvemos tu inversión.
+    </p>
+    <img
+      src="https://source.unsplash.com/300x200/?trust"
+      alt="Confianza"
+      class="mx-auto mt-6"
+    />
+  </section>
+
+  <!-- Testimonios -->
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-center">
+      Lo que dicen nuestros clientes
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <div class="p-6 bg-white shadow-lg rounded-lg">
+        <p class="text-gray-700 italic">
+          "Esta plataforma ha cambiado mi vida. No puedo recomendarla lo
+          suficiente!"
+        </p>
+        <p class="text-right mt-4 font-bold">- Juan Pérez</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg">
+        <p class="text-gray-700 italic">
+          "Gracias a ellos, ahora tengo más oportunidades y conocimientos que
+          nunca."
+        </p>
+        <p class="text-right mt-4 font-bold">- María López</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-6 text-center">
+    <p>&copy; 2025 Tu Empresa - Todos los derechos reservados.</p>
+  </footer>
+</Layout>

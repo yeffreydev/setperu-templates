@@ -1,0 +1,73 @@
+---
+// VideoPlayer.astro
+// Props que aceptará el componente
+interface Props {
+  videoSrc: string;
+  poster?: string;
+  title?: string;
+  autoPlay?: boolean;
+  controls?: boolean;
+}
+
+const {
+  videoSrc,
+  poster = "",
+  title = "Video Player",
+  autoPlay = false,
+  controls = true,
+} = Astro.props;
+---
+
+<div class="video-player-container">
+  <div class="video-wrapper">
+    <video
+      class="video-element"
+      src={videoSrc}
+      poster={poster}
+      autoplay={autoPlay}
+      controls={controls}
+      playsinline
+    >
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </div>
+</div>
+
+<style>
+  /* src/styles/video-player.css */
+  .video-player-container {
+    position: relative;
+    width: 100%;
+    max-width: 1024px; /* Equivalente a max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* Equivalente a rounded-xl */
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Equivalente a shadow-2xl */
+  }
+
+  .video-element {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  .video-element:hover + .video-overlay,
+  .video-wrapper:hover .video-overlay {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 640px) {
+    .video-title {
+      font-size: 1rem; /* Equivalente a text-base */
+    }
+  }
+</style>

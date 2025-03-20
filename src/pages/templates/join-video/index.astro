@@ -1,0 +1,111 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import VideoPlayer from "../../../components/VideoPlayer.astro";
+import videoSrc from "../../../assets/236316_small.mp4";
+---
+
+<Layout>
+  <!-- Header con fondo degradado y overlay -->
+  <header class="relative bg-gradient-to-r from-purple-600 to-indigo-600 py-16">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative container mx-auto px-4 text-center">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-white tracking-wide animate-fade-in"
+      >
+        ¿TENDRÁS LO QUE SE NECESITA?
+      </h2>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <main class="container mx-auto px-4 py-12">
+    <div class="flex flex-col items-center gap-8">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-gray-900 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+      >
+        Descubre tu resultado
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl text-center">
+        ¡Mira el VIDEO, activa el audio y quédate hasta el final que tengo algo
+        especial para ti!
+      </p>
+      <div class="w-full max-w-4xl">
+        <VideoPlayer videoSrc={videoSrc} title="Tu aventura comienza aquí" />
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="">
+      <button
+        class="cursor-pointer
+      flex
+      flex-col
+      justify-center
+      text-white
+      mb-2
+      bg-gray-600
+      py-3
+      rounded-lg
+      items-center
+      w-full
+      border-3
+      gap-2
+      border-gray-300"
+      >
+        <span class="text-3xl font-semibold">
+          Quiero Participar En La Certificación Digital
+        </span>
+        <a href="#" class="">
+          Dale clic aquí y regístrate en el entrenamiento
+        </a>
+      </button>
+    </div>
+  </main>
+  <div class="bg-gray-900 text-white py-8 flex flex-col">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col justify-between items-center gap-6">
+        <h3 class="uppercase">Titulo del programa.</h3>
+        <div class="flex gap-6">
+          <a
+            href="#"
+            class="hover:text-indigo-400 transition-colors duration-200"
+          >
+            TERMS & CONDITIONS
+          </a>
+          <a
+            href="#"
+            class="hover:text-indigo-400 transition-colors duration-200"
+          >
+            PRIVACY POLICY
+          </a>
+          <a
+            href="#"
+            class="hover:text-indigo-400 transition-colors duration-200"
+          >
+            LEGAL
+          </a>
+        </div>
+        <p class="text-sm text-gray-400">
+          All Rights Reserved 2025 © Copyright
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+  </style>
+</Layout>

@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class="flex flex-col items-center gap-6 container mx-auto px-6 min-h-screen"
+  >
+    <h1
+      class="text-4xl md:text-5xl font-bold text-center mt-20 mb-8 text-gray-900"
+    >
+      Plantillas Disponibles
+    </h1>
+
+    <div class="flex flex-col items-center gap-4 w-full max-w-md">
+      <a
+        href="/templates/join-video"
+        class="w-full text-center py-3 px-6 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
+      >
+        Minimalista con video
+      </a>
+      <a
+        href="/templates/service-minimalist"
+        class="w-full text-center py-3 px-6 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
+      >
+        Landing para servicio minimalista
+      </a>
+    </div>
+  </div>
+
+  <footer class="w-full py-4 bg-gray-800 text-center text-white mt-10">
+    <p class="text-sm">&copy; 2025 SetPeru. Todos los derechos reservados.</p>
+  </footer>
 </Layout>
