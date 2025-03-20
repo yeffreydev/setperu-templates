@@ -1,183 +1,146 @@
 ---
-// src/pages/index.astro
 import Layout from "../../../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <!-- Encabezado -->
-  <header
-    class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20"
+  <!-- Navbar -->
+  <nav class="bg-indigo-900 text-white p-4 fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Astro</h1>
+      <div class="space-x-4">
+        <a href="#servicios" class="hover:text-indigo-300">Servicios</a>
+        <a href="#testimonios" class="hover:text-indigo-300">Testimonios</a>
+        <a href="#contacto" class="hover:text-indigo-300">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="bg-gradient-to-r from-indigo-900 to-purple-800 text-white pt-20 pb-16"
   >
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Transforma Tu Vida Hoy
-      </h1>
-      <p class="text-xl md:text-2xl max-w-2xl mx-auto">
-        Descubre el método probado que ha ayudado a miles a alcanzar sus sueños
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-4">Descubre Tu Destino con Astro</h1>
+      <p class="text-xl mb-8">
+        Lecturas astrológicas personalizadas para guiarte en tu camino
       </p>
-    </div>
-  </header>
-
-  <!-- Propuesta de valor + Imagen -->
-  <section class="py-16">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-8 md:mb-0">
-        <h2 class="text-3xl font-bold mb-4">Tu Éxito Comienza Aquí</h2>
-        <p class="text-gray-600 mb-6">
-          Únete a nuestra masterclass gratuita y descubre las estrategias que
-          cambiarán tu futuro en solo 7 días.
-        </p>
-        <!-- Llamado a la acción -->
-        <a
-          href="#form"
-          class="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition"
-          >¡Comienza Ahora!</a
-        >
-      </div>
-      <div class="md:w-1/2">
-        <img
-          src="https://images.unsplash.com/photo-1661956602116-aa68621c7cb9"
-          alt="Éxito"
-          class="rounded-lg shadow-lg"
-        />
-      </div>
+      <a
+        href="#contacto"
+        class="bg-yellow-400 text-indigo-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition duration-300"
+        >Solicita tu Lectura</a
+      >
     </div>
   </section>
 
-  <!-- Beneficios clave -->
-  <section class="bg-white py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">¿Qué Obtendrás?</h2>
+  <!-- Servicios -->
+  <section id="servicios" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div
-            class="bg-indigo-100 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"
-          >
-            <span class="text-2xl">🚀</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Crecimiento Rápido</h3>
-          <p class="text-gray-600">Resultados visibles en la primera semana</p>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Carta Natal</h3>
+          <p class="text-gray-600">
+            Descubre cómo los astros influyen en tu personalidad y destino.
+          </p>
         </div>
-        <div class="text-center">
-          <div
-            class="bg-indigo-100 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"
-          >
-            <span class="text-2xl">🎯</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Estrategias Claras</h3>
-          <p class="text-gray-600">Pasos simples y efectivos</p>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Tránsitos</h3>
+          <p class="text-gray-600">
+            Entiende las energías actuales y cómo aprovecharlas.
+          </p>
         </div>
-        <div class="text-center">
-          <div
-            class="bg-indigo-100 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"
-          >
-            <span class="text-2xl">💡</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Soporte Expertos</h3>
-          <p class="text-gray-600">Acompañamiento 24/7</p>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Compatibilidad</h3>
+          <p class="text-gray-600">
+            Explora la dinámica de tus relaciones amorosas o laborales.
+          </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Captación de leads -->
-  <section id="form" class="py-16 bg-gradient-to-r from-indigo-50 to-purple-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold text-center mb-6">
-          Obtén Tu Clase Gratis
-        </h2>
-        <form action="#" class="space-y-4">
-          <input
-            type="text"
-            placeholder="Nombre"
-            class="w-full p-3 border rounded-lg"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            class="w-full p-3 border rounded-lg"
-          />
-          <button
-            type="submit"
-            class="w-full bg-indigo-600 text-white p-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
-            >Enviar y Obtener Acceso</button
-          >
-        </form>
-        <p class="text-center text-gray-600 mt-4 text-sm">
-          O <a
-            href="https://wa.me/123456789"
-            class="text-indigo-600 font-semibold">contáctanos por WhatsApp</a
-          >
-        </p>
       </div>
     </div>
   </section>
 
   <!-- Testimonios -->
-  <section class="py-16">
-    <div class="container mx-auto px-4">
+  <section id="testimonios" class="bg-gray-200 py-16">
+    <div class="container mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12">
         Lo Que Dicen Nuestros Clientes
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <p class="text-gray-600 mb-4">
-            "Cambió mi vida por completo en solo 30 días."
+          <p class="text-gray-600 italic">
+            "La lectura de mi carta natal fue increíblemente precisa y
+            reveladora."
           </p>
-          <p class="font-semibold">María G.</p>
+          <p class="mt-4 font-semibold">- María G.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <p class="text-gray-600 mb-4">
-            "Las estrategias son claras y efectivas."
+          <p class="text-gray-600 italic">
+            "Los tránsitos me ayudaron a tomar decisiones clave en mi vida."
           </p>
-          <p class="font-semibold">Juan P.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <p class="text-gray-600 mb-4">"El mejor soporte que he recibido."</p>
-          <p class="font-semibold">Ana R.</p>
+          <p class="mt-4 font-semibold">- Juan P.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Garantías -->
-  <section class="bg-gray-200 py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-8">Tu Satisfacción Garantizada</h2>
-      <div class="flex justify-center space-x-8">
-        <div>
-          <img
-            src="https://via.placeholder.com/100x100?text=Sello+1"
-            alt="Sello de garantía"
-            class="mx-auto"
-          />
-          <p class="mt-2 text-gray-600">100% Seguro</p>
-        </div>
-        <div>
-          <img
-            src="https://via.placeholder.com/100x100?text=Sello+2"
-            alt="Sello de calidad"
-            class="mx-auto"
-          />
-          <p class="mt-2 text-gray-600">Certificado</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer con CTA final -->
-  <footer class="bg-indigo-600 text-white py-12">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4">¿Listo para Empezar?</h2>
+  <!-- CTA -->
+  <section class="bg-indigo-900 text-white py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">¿Listo para Conocer Tu Futuro?</h2>
+      <p class="text-xl mb-8">Reserva tu consulta personalizada hoy mismo</p>
       <a
-        href="#form"
-        class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
-        >Únete Ahora</a
+        href="#contacto"
+        class="bg-yellow-400 text-indigo-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition duration-300"
+        >Contáctanos Ahora</a
       >
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Contáctanos</h2>
+      <form class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <input
+            type="text"
+            placeholder="Nombre"
+            class="w-full p-3 border rounded-lg"
+          />
+        </div>
+        <div class="mb-4">
+          <input
+            type="email"
+            placeholder="Correo Electrónico"
+            class="w-full p-3 border rounded-lg"
+          />
+        </div>
+        <div class="mb-4">
+          <textarea
+            placeholder="Mensaje"
+            class="w-full p-3 border rounded-lg h-32"></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-indigo-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 w-full"
+          >Enviar</button
+        >
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Astro. Todos los derechos reservados.</p>
+      <div class="mt-2">
+        <a href="#" class="text-gray-400 hover:text-white mx-2"
+          >Política de Privacidad</a
+        >
+        <a href="#" class="text-gray-400 hover:text-white mx-2"
+          >Términos de Servicio</a
+        >
+      </div>
     </div>
   </footer>
 </Layout>
